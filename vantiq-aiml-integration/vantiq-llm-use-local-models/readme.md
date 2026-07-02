@@ -38,6 +38,17 @@ http で構成することが多いので、 http なのか https なのか、�
 
 api_keyは、 `"api_key": "{YOUR API KEY}"` のように直接指定することもできます。  
 
+また、Embeddingモデルの場合は以下のConfigurationになります。
+```json
+{
+   "class_name":"langchain_openai.embeddings.OpenAIEmbeddings",
+   "model": "<モデル名>",
+   "base_url":"http://{HOSTNAME or IP}:{PORT NUMBER}/v1",
+   "api_key": "@secrets({YOUR SECRET NAME})",
+   "check_embedding_ctx_length": false
+}
+```
+
 ### 設定内容の確認
 
 次のような設定となります。  
